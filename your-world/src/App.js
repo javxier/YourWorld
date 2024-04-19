@@ -1,20 +1,18 @@
-import React from 'react';
+import React, { useState } from 'react';
+import Tabs from './Tabs';
 
 function App() {
+  const tabs = [
+    { label: 'Tab 1', content: 'Content for Tab 1' },
+    { label: 'Tab 2', content: 'Content for Tab 2' },
+    { label: 'Tab 3', content: 'Content for Tab 3' },
+  ];
+
+  const [activeTab, setActiveTab] = useState(tabs[0].label);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <h1>Welcome to the Beginning</h1>
-        <p>Reaction. Combination.</p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn It
-        </a>
-      </header>
+      <Tabs tabs={tabs} activeTab={activeTab} onTabChange={setActiveTab} />
     </div>
   );
 }
