@@ -3,10 +3,9 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import AppRouter from './AppRouter';
+import Page1 from './Page1';
 
-ReactDOM.render(<AppRouter />, document.getElementById('root'));
-
+ReactDOM.render(<Page1 />, document.getElementById('root'));
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
